@@ -11,7 +11,7 @@ let currentIndex = 0; // Initialize the index to 0
 router.use(requestIp.mw());
 
 router.get('/', async function(req, res, next) {
-    const ipAddress = "141.164.101.129"; // Hardcoded IP address for testing purposes
+    const ipAddress = requestIp; // Hardcoded IP address for testing purposes
 
     try {
         // Fetch additional data from the IP address using IP-API service
